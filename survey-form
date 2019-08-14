@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>FreeCodeCamp: Survey Form</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+    }
+
+    main {
+      padding: 2em;
+      display: flex;
+      width: 90%;
+      margin: 0 auto;
+    }
+
+    header {
+      width: 30%;
+      border: 1px solid black;
+      padding: 1em;
+      background-color: black;
+      color: white;
+    }
+
+    header h1 {
+      margin-top: 0; 
+    }
+
+    form {
+      width: 70%;
+      padding: 1em;
+      border: 1px solid;
+    }
+
+    .input-container {
+      display: flex;
+    }
+
+    .input-container + .input-container {
+      margin-top: 1em;
+    }
+
+    .input-container label {
+      width: 50%;
+      text-align: right;
+      padding-right: 2em;
+    }
+
+    .input-container input, textarea {
+      padding: 0.5em;
+      width: 50%;
+    }
+
+    .nested-input input {
+      width: auto;
+    }
+
+    .button-container {
+      margin-top: 1em;
+      text-align: center;
+    }
+
+    #submit {
+      padding: 0.5em 1em;
+    }
+
+    @media (max-width: 750px) {
+      main {
+        display: block;
+      }
+
+      header {
+        width: 100%;
+      }
+
+      form {
+        width: 100%;
+      }
+
+      .input-container {
+        display: block;
+      }
+
+      .input-container label {
+        display: block;
+        text-align: left;
+        width: 100%;
+        margin-bottom: 0.25em;
+      }
+
+      .input-container input, textarea {
+        width: 100%;
+      }
+      .nested-input input {
+        width: auto;
+      }
+    }
+  </style>
+ </head>
+ <body>
+  <main>
+    <header>
+      <h1 id="title">Fill-a-form</h1>
+      <p id="description">A collection of random information that serves no purpose whatsoever.</p>
+    </header>
+    <form action="" id="survey-form">
+      <div class="input-container">
+        <label for="name" id="name-label">What's the funniest name you've heard?*</label>
+        <input type="text" id="name" name="name" placeholder="Pulchritude" required>
+      </div>
+      <div class="input-container">
+        <label for="email" id="email-label">What do you think a cool spy email would be?*</label>
+        <input type="email" id="email" name="email" placeholder="not@spy.com" required>
+      </div>
+      <div class="input-container">
+        <label for="number" id="number-label">How many fingers am I holding up?*</label>
+        <input type="number" id="number" name="number" min="1" max="10" placeholder="I can't see your fingers!" required>
+      </div>
+      <div class="input-container">
+        <label for="dropdown" id="dropdown-label">How do you think 'banana' should be spelled?</label>
+        <select name="dropdown" id="dropdown">
+          <option value="a">banana</option>
+          <option value="e">benene</option>
+          <option value="i">binini</option>
+          <option value="o">bonono</option>
+          <option value="u">bununu</option>
+        </select>
+      </div>
+      <div class="input-container">
+        <label for="radio">Which would you rather choose: this, that or neither?</label>
+        <div class="nested-input">
+          <input type="radio" name="radio" value="this">This<br>
+          <input type="radio" name="radio" value="that">That<br>
+          <input type="radio" name="radio" value="neither">Neither
+        </div>
+      </div>
+      <div class="input-container">
+        <label for="checkbox">Imagine if, instead of saying eleven, we said onety-one: </label>
+        <div class="nested-input">
+          <input type="checkbox" value="first">onety-one<br>
+          <input type="checkbox" value="second">twoty-two<br>
+          <input type="checkbox" value="third">threety-three<br>
+          <input type="checkbox" value="fourth">fourty-four (okay this spoilt it)
+        </div>
+      </div>
+      <div class="input-container">
+        <label for="comments">What's that one passage that you know completely off the top of your head?</label>
+        <textarea name="comments" id="comments" cols="30" rows="10" placeholder="According to all known laws of aviation, there is no way that a bee should be able to fly. Its wings are too small to get its fat little body off the ground. The bee, of course, flies anyways. Because bees don't care what humans think is impossible."></textarea>
+      </div>
+      <div class="button-container">
+        <button id="submit">Submit</button>
+      </div>
+    </form>
+  </main>
+ </body>
+ <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</html>
