@@ -1,0 +1,176 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Jemima Abu | FreeCodeCamp: Product Landing Page</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: #eee;
+      margin: 0;
+    }
+
+    #nav-bar {
+      position: fixed;
+      z-index: 10;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: #fca284;
+      padding: 1em 3em;
+      display: flex;
+      height: 10vh;
+    }
+
+    #nav-logo {
+      width: 50%;
+    }
+
+    #header-img {
+      height: 100%;
+    }
+
+    #nav-links {
+      width: 50%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    a.nav-link {
+      color: white;
+      text-decoration: none;
+      transition: color .3s;
+    }
+
+    a.nav-link:hover {
+      color: #E54E23;
+    }
+
+    main {
+      width: 100%;
+      margin-top: 10vh;
+    }
+
+    section {
+      position: relative;
+    }
+
+    #home {
+      height: 90vh;
+      position: relative;
+      overflow: hidden;
+    }
+
+    #home #video {
+      min-width: 100%;
+      min-height: 100%;
+      position: fixed;
+      border: none;
+      z-index: -99;
+    }
+
+    #subscribe {
+      min-height: 50vh;
+      background-color: #fff;
+      padding: 3em;
+      text-align: center;
+      position: relative;
+    }
+
+    .input-container {
+      margin-bottom: 1em;
+    }
+
+    input#email {
+      padding: 0.5em;
+      width: 75%;
+    }
+
+    input#submit {
+      padding: 0.5em 1em;
+    }
+
+    #footer {
+      min-height: 50vh;
+      background-color: #eee;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 3em;
+    }
+
+
+    @media (max-width: 450px) {
+      #nav-bar {
+        display: grid;
+        height: auto;
+      }
+
+      #nav-logo {
+        width: 100%;
+        text-align: center;
+        padding: 0.5em;
+      }
+
+      #header-img {
+        height: 2.5em;
+      }
+
+      #nav-links {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
+  <header id="header">
+    <nav id="nav-bar">
+      <div id="nav-logo">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/768px-HTML5_logo_and_wordmark.svg.png"
+          alt="HTML5 logo" id="header-img">
+      </div>
+      <div id="nav-links">
+        <a href="#home" class="nav-link">Home</a>
+        <a href="#subscribe" class="nav-link">Subscribe</a>
+        <a href="#footer" class="nav-link">Footer</a>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <section id="home">
+      <iframe src="https://www.youtube.com/embed/6TwkVs6nhoY?controls=0&showinfo=0&rel=0&loop=1&autoplay=1&mute=1"
+        id="video"></iframe>
+    </section>
+    <section id="subscribe">
+      <h1>Write An Email!</h1>
+      <p>Write an email, any email at all, for a chance to win... nothing!</p>
+      <form action="https://www.freecodecamp.org/email-submit" id="form">
+        <div class="input-container">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" placeholder="example@email.com">
+        </div>
+        <input type="submit" id="submit">
+      </form>
+    </section>
+    <footer id="footer">
+      Footer
+    </footer>
+  </main>
+</body>
+
+</html>
