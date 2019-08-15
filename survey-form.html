@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>FreeCodeCamp: Survey Form</title>
   <style>
@@ -27,7 +28,7 @@
     }
 
     header h1 {
-      margin-top: 0; 
+      margin-top: 0;
     }
 
     form {
@@ -40,7 +41,7 @@
       display: flex;
     }
 
-    .input-container + .input-container {
+    .input-container+.input-container {
       margin-top: 1em;
     }
 
@@ -50,7 +51,8 @@
       padding-right: 2em;
     }
 
-    .input-container input, textarea {
+    .input-container input,
+    textarea {
       padding: 0.5em;
       width: 50%;
     }
@@ -92,16 +94,19 @@
         margin-bottom: 0.25em;
       }
 
-      .input-container input, textarea {
+      .input-container input,
+      textarea {
         width: 100%;
       }
+
       .nested-input input {
         width: auto;
       }
     }
   </style>
- </head>
- <body>
+</head>
+
+<body>
   <main>
     <header>
       <h1 id="title">Fill-a-form</h1>
@@ -118,7 +123,8 @@
       </div>
       <div class="input-container">
         <label for="number" id="number-label">How many fingers am I holding up?*</label>
-        <input type="number" id="number" name="number" min="1" max="10" placeholder="I can't see your fingers!" required>
+        <input type="number" id="number" name="number" min="1" max="10" placeholder="I can't see your fingers!"
+          required>
       </div>
       <div class="input-container">
         <label for="dropdown" id="dropdown-label">How do you think 'banana' should be spelled?</label>
@@ -149,13 +155,15 @@
       </div>
       <div class="input-container">
         <label for="comments">What's that one passage that you know completely off the top of your head?</label>
-        <textarea name="comments" id="comments" cols="30" rows="10" placeholder="According to all known laws of aviation, there is no way that a bee should be able to fly. Its wings are too small to get its fat little body off the ground. The bee, of course, flies anyways. Because bees don't care what humans think is impossible."></textarea>
+        <textarea name="comments" id="comments" cols="30" rows="10"
+          placeholder="According to all known laws of aviation, there is no way that a bee should be able to fly. Its wings are too small to get its fat little body off the ground. The bee, of course, flies anyways. Because bees don't care what humans think is impossible."></textarea>
       </div>
       <div class="button-container">
         <button id="submit">Submit</button>
       </div>
     </form>
   </main>
- </body>
- <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</body>
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
 </html>
