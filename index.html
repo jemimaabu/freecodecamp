@@ -61,7 +61,7 @@
     header,
     section {
       min-height: 100vh;
-      padding: 12vh 2em 1em;
+      padding: 12vh 2em;
     }
 
     header {
@@ -126,16 +126,26 @@
       background-color: #fca07f;
     }
 
+    #projects .section-content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      align-items: center;
+      width: 65%;
+      margin: 0 auto;
+    }
+
     #projects .project-tile {
       text-align: center;
       margin: 1em;
+      width: 27.5%;
     }
 
     .project-tile a {
       padding: 1em;
       border: 1px solid;
       display: inline-block;
-      min-width: 50%;
+      width: 100%;
       text-decoration: none;
       color: inherit;
       background: linear-gradient(to right, transparent);
@@ -146,23 +156,6 @@
       background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
       background-size: 900% 900%;
       animation: rainbow 15s ease infinite;
-    }
-
-    #profile-link {
-      text-align: center;
-      display: block;
-      color: black;
-      text-decoration: none;
-    }
-
-    #profile-link:before {
-      content: ">>";
-      display: inline-block;
-      transition: .3s;
-    }
-
-    #profile-link:hover:before {
-      transform: translatex(-.5em);
     }
 
     #contact {
@@ -244,12 +237,18 @@
     }
 
     @media (max-width: 750px) {
-      section .section-content {
+      section .section-content,
+      #projects .section-content {
         width: 100%;
       }
 
       section h1 {
         width: 100%;
+      }
+
+      #projects .project-tile {
+        width: 100%;
+        margin: 0.5em 0;
       }
     }
   </style>
@@ -291,19 +290,35 @@
     </section>
     <section id="projects">
       <h1>Projects</h1>
-      <div class="project-tile">
-        <a href="tribute-page" class="project-link">Tribute Page</a>
+      <div class="section-content project">
+        <div class="project-tile">
+          <a href="tribute-page" class="project-link">Tribute Page</a>
+        </div>
+        <div class="project-tile">
+          <a href="survey-form" class="project-link">Survey Form</a>
+        </div>
+        <div class="project-tile">
+          <a href="technical-documentation-page" class="project-link">Technical Documentation Page</a>
+        </div>
+        <div class="project-tile">
+          <a href="product-landing-page" class="project-link">Product Landing Page</a>
+        </div>
+        <div class="project-tile">
+          <a href="https://codepen.io/Jemimaabu/pen/bGbRzea" class="project-link">Random Quote Generator</a>
+        </div>
+        <div class="project-tile">
+          <a href="https://codepen.io/Jemimaabu/pen/KKPvdEV" class="project-link">Markdown Previewer</a>
+        </div>
+        <div class="project-tile">
+          <a href="https://codepen.io/Jemimaabu/pen/BaBdxqK" class="project-link">Drum Machine</a>
+        </div>
+        <div class="project-tile">
+          <a href="https://codepen.io/Jemimaabu/pen/mdbMZXL" class="project-link">JavaScript Calculator</a>
+        </div>
+        <div class="project-tile">
+          <a href="https://codepen.io/Jemimaabu/pen/MWgEmxZ" class="project-link">Pomodoro Clock</a>
+        </div>
       </div>
-      <div class="project-tile">
-        <a href="survey-form" class="project-link">Survey Form</a>
-      </div>
-      <div class="project-tile">
-        <a href="technical-documentation-page" class="project-link">Technical Documentation Page</a>
-      </div>
-      <div class="project-tile">
-        <a href="product-landing-page" class="project-link">Product Landing Page</a>
-      </div>
-      <a href="https://github.com/jemimaabu/freecodecamp" target="_blank" id="profile-link">See All Projects</a>
     </section>
     <section id="contact">
       <h1>Contact</h1>
